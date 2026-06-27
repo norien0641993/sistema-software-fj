@@ -1,3 +1,8 @@
+#programa:Ingenieria electrónica 
+#Fase 4 - Componente práctico - Prácticas simuladas
+#Estudiante: Neiron Andrey Rozo Quezada
+#Curso: Programación. 
+
 # =============================================================================
 # main.py - Archivo Principal
 # =============================================================================
