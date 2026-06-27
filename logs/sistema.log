@@ -1,0 +1,1037 @@
+[2026-06-27 15:44:00] [INFO]: Reserva 1 confirmada. Cliente: Juan Pérez, Servicio: Reserva Sala VIP, Costo: $150.00
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [INFO]: Reserva 2 confirmada. Cliente: María Gómez, Servicio: Alquiler Laptop Gamer, Costo: $150.00
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [ERROR]: Error al confirmar la reserva 3
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [ERROR]: Error al cargar una reserva de ejemplo
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 53, in _cargar_datos_iniciales
+    reserva3 = Reserva(3, self.clientes[2], self.servicios[3], 2)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [INFO]: Cliente registrado: Ana Martínez (ID: 4)
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [ERROR]: Intento de registro de cliente inválido
+    Detalles de la excepción: ClienteInvalidoError: Email inválido: 'pedrocorreo'. Debe contener '@'.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 76, in registrar_cliente
+    cliente = Cliente(nuevo_id, nombre, email, telefono)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\cliente.py", line 17, in __init__
+    self.email = email
+    ^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\cliente.py", line 28, in email
+    raise ClienteInvalidoError(f"Email inválido: '{valor}'. Debe contener '@'.")
+modelos.excepciones.ClienteInvalidoError: Email inválido: 'pedrocorreo'. Debe contener '@'.
+
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [ERROR]: Intento de registro de cliente inválido
+    Detalles de la excepción: ClienteInvalidoError: Teléfono inválido: '123'. Debe tener al menos 7 dígitos.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 76, in registrar_cliente
+    cliente = Cliente(nuevo_id, nombre, email, telefono)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\cliente.py", line 18, in __init__
+    self.telefono = telefono
+    ^^^^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\cliente.py", line 41, in telefono
+    raise ClienteInvalidoError(f"Teléfono inválido: '{valor}'. Debe tener al menos 7 dígitos.")
+modelos.excepciones.ClienteInvalidoError: Teléfono inválido: '123'. Debe tener al menos 7 dígitos.
+
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [INFO]: Reserva 3 confirmada. Cliente: Juan Pérez, Servicio: Reserva Sala VIP, Costo: $150.00
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [INFO]: Reserva creada exitosamente: Reserva #3 - Cliente: Juan Pérez - Servicio: Reserva Sala VIP - Estado: CONFIRMADA - Costo: $150.00
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [ERROR]: Error al confirmar la reserva 4
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [ERROR]: Error al crear la reserva para cliente 2 y servicio 4
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 99, in crear_reserva
+    reserva = Reserva(nuevo_id, cliente, servicio, duracion)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [ERROR]: Error al crear la reserva para cliente 99 y servicio 1
+    Detalles de la excepción: ReservaInvalidaError: Cliente con ID 99 no encontrado.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 92, in crear_reserva
+    raise ReservaInvalidaError(f"Cliente con ID {id_cliente} no encontrado.")
+modelos.excepciones.ReservaInvalidaError: Cliente con ID 99 no encontrado.
+
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [ERROR]: Error al confirmar la reserva 4
+    Detalles de la excepción: ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\servicios.py", line 41, in validar_parametros
+    raise ReservaInvalidaError("La duración para reservar sala debe ser positiva.")
+modelos.excepciones.ReservaInvalidaError: La duración para reservar sala debe ser positiva.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 40, in _confirmar_reserva_interna
+    self.servicio.validar_parametros(duracion=self.duracion)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\servicios.py", line 44, in validar_parametros
+    raise ReservaInvalidaError("Parámetros inválidos para ServicioReservaSala.") from e
+modelos.excepciones.ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [ERROR]: Error al crear la reserva para cliente 1 y servicio 1
+    Detalles de la excepción: ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\servicios.py", line 41, in validar_parametros
+    raise ReservaInvalidaError("La duración para reservar sala debe ser positiva.")
+modelos.excepciones.ReservaInvalidaError: La duración para reservar sala debe ser positiva.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 99, in crear_reserva
+    reserva = Reserva(nuevo_id, cliente, servicio, duracion)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 40, in _confirmar_reserva_interna
+    self.servicio.validar_parametros(duracion=self.duracion)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\servicios.py", line 44, in validar_parametros
+    raise ReservaInvalidaError("Parámetros inválidos para ServicioReservaSala.") from e
+modelos.excepciones.ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [INFO]: Reserva 1 cancelada exitosamente.
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [ERROR]: Error al cancelar la reserva 999
+    Detalles de la excepción: ReservaInvalidaError: Reserva con ID 999 no encontrada.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 117, in cancelar_reserva
+    raise ReservaInvalidaError(f"Reserva con ID {id_reserva} no encontrada.")
+modelos.excepciones.ReservaInvalidaError: Reserva con ID 999 no encontrada.
+
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [INFO]: Reserva 2 procesada/completada exitosamente.
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [ERROR]: Error al procesar la reserva 1
+    Detalles de la excepción: ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 82, in procesar
+    raise ReservaInvalidaError(f"No se puede procesar una reserva en estado '{self.estado}'.")
+modelos.excepciones.ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [ERROR]: Error al procesar la reserva 1
+    Detalles de la excepción: ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 135, in procesar_reserva
+    reserva.procesar()
+    ~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 82, in procesar
+    raise ReservaInvalidaError(f"No se puede procesar una reserva en estado '{self.estado}'.")
+modelos.excepciones.ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [INFO]: Reserva 1 confirmada. Cliente: Juan Pérez, Servicio: Reserva Sala VIP, Costo: $150.00
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [INFO]: Reserva 2 confirmada. Cliente: María Gómez, Servicio: Alquiler Laptop Gamer, Costo: $150.00
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [ERROR]: Error al confirmar la reserva 3
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:00] [ERROR]: Error al cargar una reserva de ejemplo
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 53, in _cargar_datos_iniciales
+    reserva3 = Reserva(3, self.clientes[2], self.servicios[3], 2)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:30] [INFO]: Cliente registrado: wendy martinez (ID: 4)
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:55] [INFO]: Reserva 3 confirmada. Cliente: wendy martinez, Servicio: Asesoría en IA, Costo: $800.00
+--------------------------------------------------------------------------------
+[2026-06-27 15:44:55] [INFO]: Reserva creada exitosamente: Reserva #3 - Cliente: wendy martinez - Servicio: Asesoría en IA - Estado: CONFIRMADA - Costo: $800.00
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [INFO]: Reserva 1 confirmada. Cliente: Juan Pérez, Servicio: Reserva Sala VIP, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [INFO]: Reserva 2 confirmada. Cliente: María Gómez, Servicio: Alquiler Laptop Gamer, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [ERROR]: Error al confirmar la reserva 3
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [ERROR]: Error al cargar una reserva de ejemplo
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 82, in _cargar_datos_iniciales
+    reserva3 = Reserva(3, self.clientes[2], self.servicios[3], 2)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [INFO]: Cliente registrado: Ana Martínez (ID: 4)
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [ERROR]: Intento de registro de cliente inválido
+    Detalles de la excepción: ClienteInvalidoError: Email inválido: 'pedrocorreo'. Debe contener '@'.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 105, in registrar_cliente
+    cliente = Cliente(nuevo_id, nombre, email, telefono)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\cliente.py", line 17, in __init__
+    self.email = email
+    ^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\cliente.py", line 28, in email
+    raise ClienteInvalidoError(f"Email inválido: '{valor}'. Debe contener '@'.")
+modelos.excepciones.ClienteInvalidoError: Email inválido: 'pedrocorreo'. Debe contener '@'.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [ERROR]: Intento de registro de cliente inválido
+    Detalles de la excepción: ClienteInvalidoError: Teléfono inválido: '123'. Debe tener al menos 7 dígitos.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 105, in registrar_cliente
+    cliente = Cliente(nuevo_id, nombre, email, telefono)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\cliente.py", line 18, in __init__
+    self.telefono = telefono
+    ^^^^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\cliente.py", line 41, in telefono
+    raise ClienteInvalidoError(f"Teléfono inválido: '{valor}'. Debe tener al menos 7 dígitos.")
+modelos.excepciones.ClienteInvalidoError: Teléfono inválido: '123'. Debe tener al menos 7 dígitos.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [INFO]: Reserva 3 confirmada. Cliente: Juan Pérez, Servicio: Reserva Sala VIP, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [INFO]: Reserva creada exitosamente: Reserva #3 - Cliente: Juan Pérez - Servicio: Reserva Sala VIP - Estado: CONFIRMADA - Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [ERROR]: Error al confirmar la reserva 4
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [ERROR]: Error al crear la reserva para cliente 2 y servicio 4
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 128, in crear_reserva
+    reserva = Reserva(nuevo_id, cliente, servicio, duracion)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [ERROR]: Error al crear la reserva para cliente 99 y servicio 1
+    Detalles de la excepción: ReservaInvalidaError: Cliente con ID 99 no encontrado.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 121, in crear_reserva
+    raise ReservaInvalidaError(f"Cliente con ID {id_cliente} no encontrado.")
+modelos.excepciones.ReservaInvalidaError: Cliente con ID 99 no encontrado.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [ERROR]: Error al confirmar la reserva 4
+    Detalles de la excepción: ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\servicios.py", line 41, in validar_parametros
+    raise ReservaInvalidaError("La duración para reservar sala debe ser positiva.")
+modelos.excepciones.ReservaInvalidaError: La duración para reservar sala debe ser positiva.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 40, in _confirmar_reserva_interna
+    self.servicio.validar_parametros(duracion=self.duracion)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\servicios.py", line 44, in validar_parametros
+    raise ReservaInvalidaError("Parámetros inválidos para ServicioReservaSala.") from e
+modelos.excepciones.ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [ERROR]: Error al crear la reserva para cliente 1 y servicio 1
+    Detalles de la excepción: ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\servicios.py", line 41, in validar_parametros
+    raise ReservaInvalidaError("La duración para reservar sala debe ser positiva.")
+modelos.excepciones.ReservaInvalidaError: La duración para reservar sala debe ser positiva.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 128, in crear_reserva
+    reserva = Reserva(nuevo_id, cliente, servicio, duracion)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 40, in _confirmar_reserva_interna
+    self.servicio.validar_parametros(duracion=self.duracion)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\servicios.py", line 44, in validar_parametros
+    raise ReservaInvalidaError("Parámetros inválidos para ServicioReservaSala.") from e
+modelos.excepciones.ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [INFO]: Reserva 1 cancelada exitosamente.
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [ERROR]: Error al cancelar la reserva 999
+    Detalles de la excepción: ReservaInvalidaError: Reserva con ID 999 no encontrada.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 146, in cancelar_reserva
+    raise ReservaInvalidaError(f"Reserva con ID {id_reserva} no encontrada.")
+modelos.excepciones.ReservaInvalidaError: Reserva con ID 999 no encontrada.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [INFO]: Reserva 2 procesada/completada exitosamente.
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [ERROR]: Error al procesar la reserva 1
+    Detalles de la excepción: ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 82, in procesar
+    raise ReservaInvalidaError(f"No se puede procesar una reserva en estado '{self.estado}'.")
+modelos.excepciones.ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:45] [ERROR]: Error al procesar la reserva 1
+    Detalles de la excepción: ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 164, in procesar_reserva
+    reserva.procesar()
+    ~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 82, in procesar
+    raise ReservaInvalidaError(f"No se puede procesar una reserva en estado '{self.estado}'.")
+modelos.excepciones.ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:46] [INFO]: Reserva 1 confirmada. Cliente: Juan Pérez, Servicio: Reserva Sala VIP, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:46] [INFO]: Reserva 2 confirmada. Cliente: María Gómez, Servicio: Alquiler Laptop Gamer, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:46] [ERROR]: Error al confirmar la reserva 3
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:00:46] [ERROR]: Error al cargar una reserva de ejemplo
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 82, in _cargar_datos_iniciales
+    reserva3 = Reserva(3, self.clientes[2], self.servicios[3], 2)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:01:17] [INFO]: Cliente registrado: neiron andrey (ID: 4)
+--------------------------------------------------------------------------------
+[2026-06-27 16:01:56] [INFO]: Reserva 3 confirmada. Cliente: neiron andrey, Servicio: Alquiler Laptop Gamer, Costo: $240000.00
+--------------------------------------------------------------------------------
+[2026-06-27 16:01:56] [INFO]: Reserva creada exitosamente: Reserva #3 - Cliente: neiron andrey - Servicio: Alquiler Laptop Gamer - Estado: CONFIRMADA - Costo: $240000.00
+--------------------------------------------------------------------------------
+[2026-06-27 16:02:33] [INFO]: Reserva 3 cancelada exitosamente.
+--------------------------------------------------------------------------------
+[2026-06-27 16:03:02] [INFO]: Cliente registrado: wendy martinez (ID: 5)
+--------------------------------------------------------------------------------
+[2026-06-27 16:03:34] [INFO]: Reserva 4 confirmada. Cliente: wendy martinez, Servicio: Reserva Sala VIP, Costo: $1200000.00
+--------------------------------------------------------------------------------
+[2026-06-27 16:03:34] [INFO]: Reserva creada exitosamente: Reserva #4 - Cliente: wendy martinez - Servicio: Reserva Sala VIP - Estado: CONFIRMADA - Costo: $1200000.00
+--------------------------------------------------------------------------------
+[2026-06-27 16:03:43] [ERROR]: Error al procesar la reserva 3
+    Detalles de la excepción: ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 82, in procesar
+    raise ReservaInvalidaError(f"No se puede procesar una reserva en estado '{self.estado}'.")
+modelos.excepciones.ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:03:43] [ERROR]: Error al procesar la reserva 3
+    Detalles de la excepción: ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 164, in procesar_reserva
+    reserva.procesar()
+    ~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 82, in procesar
+    raise ReservaInvalidaError(f"No se puede procesar una reserva en estado '{self.estado}'.")
+modelos.excepciones.ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:03:52] [INFO]: Reserva 4 procesada/completada exitosamente.
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [INFO]: Reserva 1 confirmada. Cliente: Juan Pérez, Servicio: Reserva Sala VIP, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [INFO]: Reserva 2 confirmada. Cliente: María Gómez, Servicio: Alquiler Laptop Gamer, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [ERROR]: Error al confirmar la reserva 3
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [ERROR]: Error al cargar una reserva de ejemplo
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 82, in _cargar_datos_iniciales
+    reserva3 = Reserva(3, self.clientes[2], self.servicios[3], 2)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [INFO]: Cliente registrado: Ana Martínez (ID: 4)
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [ERROR]: Intento de registro de cliente inválido
+    Detalles de la excepción: ClienteInvalidoError: Email inválido: 'pedrocorreo'. Debe contener '@'.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 105, in registrar_cliente
+    cliente = Cliente(nuevo_id, nombre, email, telefono)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\cliente.py", line 17, in __init__
+    self.email = email
+    ^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\cliente.py", line 28, in email
+    raise ClienteInvalidoError(f"Email inválido: '{valor}'. Debe contener '@'.")
+modelos.excepciones.ClienteInvalidoError: Email inválido: 'pedrocorreo'. Debe contener '@'.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [ERROR]: Intento de registro de cliente inválido
+    Detalles de la excepción: ClienteInvalidoError: Teléfono inválido: '123'. Debe tener al menos 7 dígitos.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 105, in registrar_cliente
+    cliente = Cliente(nuevo_id, nombre, email, telefono)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\cliente.py", line 18, in __init__
+    self.telefono = telefono
+    ^^^^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\cliente.py", line 41, in telefono
+    raise ClienteInvalidoError(f"Teléfono inválido: '{valor}'. Debe tener al menos 7 dígitos.")
+modelos.excepciones.ClienteInvalidoError: Teléfono inválido: '123'. Debe tener al menos 7 dígitos.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [INFO]: Reserva 3 confirmada. Cliente: Juan Pérez, Servicio: Reserva Sala VIP, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [INFO]: Reserva creada exitosamente: Reserva #3 - Cliente: Juan Pérez - Servicio: Reserva Sala VIP - Estado: CONFIRMADA - Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [ERROR]: Error al confirmar la reserva 4
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [ERROR]: Error al crear la reserva para cliente 2 y servicio 4
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 128, in crear_reserva
+    reserva = Reserva(nuevo_id, cliente, servicio, duracion)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [ERROR]: Error al crear la reserva para cliente 99 y servicio 1
+    Detalles de la excepción: ReservaInvalidaError: Cliente con ID 99 no encontrado.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 121, in crear_reserva
+    raise ReservaInvalidaError(f"Cliente con ID {id_cliente} no encontrado.")
+modelos.excepciones.ReservaInvalidaError: Cliente con ID 99 no encontrado.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [ERROR]: Error al confirmar la reserva 4
+    Detalles de la excepción: ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\servicios.py", line 41, in validar_parametros
+    raise ReservaInvalidaError("La duración para reservar sala debe ser positiva.")
+modelos.excepciones.ReservaInvalidaError: La duración para reservar sala debe ser positiva.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 40, in _confirmar_reserva_interna
+    self.servicio.validar_parametros(duracion=self.duracion)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\servicios.py", line 44, in validar_parametros
+    raise ReservaInvalidaError("Parámetros inválidos para ServicioReservaSala.") from e
+modelos.excepciones.ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [ERROR]: Error al crear la reserva para cliente 1 y servicio 1
+    Detalles de la excepción: ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\servicios.py", line 41, in validar_parametros
+    raise ReservaInvalidaError("La duración para reservar sala debe ser positiva.")
+modelos.excepciones.ReservaInvalidaError: La duración para reservar sala debe ser positiva.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 128, in crear_reserva
+    reserva = Reserva(nuevo_id, cliente, servicio, duracion)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 40, in _confirmar_reserva_interna
+    self.servicio.validar_parametros(duracion=self.duracion)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\servicios.py", line 44, in validar_parametros
+    raise ReservaInvalidaError("Parámetros inválidos para ServicioReservaSala.") from e
+modelos.excepciones.ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [INFO]: Reserva 1 cancelada exitosamente.
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [ERROR]: Error al cancelar la reserva 999
+    Detalles de la excepción: ReservaInvalidaError: Reserva con ID 999 no encontrada.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 146, in cancelar_reserva
+    raise ReservaInvalidaError(f"Reserva con ID {id_reserva} no encontrada.")
+modelos.excepciones.ReservaInvalidaError: Reserva con ID 999 no encontrada.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [INFO]: Reserva 2 procesada/completada exitosamente.
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [ERROR]: Error al procesar la reserva 1
+    Detalles de la excepción: ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 82, in procesar
+    raise ReservaInvalidaError(f"No se puede procesar una reserva en estado '{self.estado}'.")
+modelos.excepciones.ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:57] [ERROR]: Error al procesar la reserva 1
+    Detalles de la excepción: ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 164, in procesar_reserva
+    reserva.procesar()
+    ~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 82, in procesar
+    raise ReservaInvalidaError(f"No se puede procesar una reserva en estado '{self.estado}'.")
+modelos.excepciones.ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:58] [INFO]: Reserva 1 confirmada. Cliente: Juan Pérez, Servicio: Reserva Sala VIP, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:58] [INFO]: Reserva 2 confirmada. Cliente: María Gómez, Servicio: Alquiler Laptop Gamer, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:58] [ERROR]: Error al confirmar la reserva 3
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:08:58] [ERROR]: Error al cargar una reserva de ejemplo
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 82, in _cargar_datos_iniciales
+    reserva3 = Reserva(3, self.clientes[2], self.servicios[3], 2)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 16:09:17] [ERROR]: Error al crear la reserva para cliente 5 y servicio 2
+    Detalles de la excepción: ReservaInvalidaError: Cliente con ID 5 no encontrado.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\Proyecto\sistema\gestor.py", line 121, in crear_reserva
+    raise ReservaInvalidaError(f"Cliente con ID {id_cliente} no encontrado.")
+modelos.excepciones.ReservaInvalidaError: Cliente con ID 5 no encontrado.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [INFO]: Reserva 1 confirmada. Cliente: Juan Pérez, Servicio: Reserva Sala VIP, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [INFO]: Reserva 2 confirmada. Cliente: María Gómez, Servicio: Alquiler Laptop Gamer, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [ERROR]: Error al confirmar la reserva 3
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [ERROR]: Error al cargar una reserva de ejemplo
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\sistema\gestor.py", line 82, in _cargar_datos_iniciales
+    reserva3 = Reserva(3, self.clientes[2], self.servicios[3], 2)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [INFO]: Cliente registrado: Ana Martínez (ID: 4)
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [ERROR]: Intento de registro de cliente inválido
+    Detalles de la excepción: ClienteInvalidoError: Email inválido: 'pedrocorreo'. Debe contener '@'.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\sistema\gestor.py", line 105, in registrar_cliente
+    cliente = Cliente(nuevo_id, nombre, email, telefono)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\cliente.py", line 17, in __init__
+    self.email = email
+    ^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\cliente.py", line 28, in email
+    raise ClienteInvalidoError(f"Email inválido: '{valor}'. Debe contener '@'.")
+modelos.excepciones.ClienteInvalidoError: Email inválido: 'pedrocorreo'. Debe contener '@'.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [ERROR]: Intento de registro de cliente inválido
+    Detalles de la excepción: ClienteInvalidoError: Teléfono inválido: '123'. Debe tener al menos 7 dígitos.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\sistema\gestor.py", line 105, in registrar_cliente
+    cliente = Cliente(nuevo_id, nombre, email, telefono)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\cliente.py", line 18, in __init__
+    self.telefono = telefono
+    ^^^^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\cliente.py", line 41, in telefono
+    raise ClienteInvalidoError(f"Teléfono inválido: '{valor}'. Debe tener al menos 7 dígitos.")
+modelos.excepciones.ClienteInvalidoError: Teléfono inválido: '123'. Debe tener al menos 7 dígitos.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [INFO]: Reserva 3 confirmada. Cliente: Juan Pérez, Servicio: Reserva Sala VIP, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [INFO]: Reserva creada exitosamente: Reserva #3 - Cliente: Juan Pérez - Servicio: Reserva Sala VIP - Estado: CONFIRMADA - Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [ERROR]: Error al confirmar la reserva 4
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [ERROR]: Error al crear la reserva para cliente 2 y servicio 4
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\sistema\gestor.py", line 128, in crear_reserva
+    reserva = Reserva(nuevo_id, cliente, servicio, duracion)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [ERROR]: Error al crear la reserva para cliente 99 y servicio 1
+    Detalles de la excepción: ReservaInvalidaError: Cliente con ID 99 no encontrado.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\sistema\gestor.py", line 121, in crear_reserva
+    raise ReservaInvalidaError(f"Cliente con ID {id_cliente} no encontrado.")
+modelos.excepciones.ReservaInvalidaError: Cliente con ID 99 no encontrado.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [ERROR]: Error al confirmar la reserva 4
+    Detalles de la excepción: ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\servicios.py", line 41, in validar_parametros
+    raise ReservaInvalidaError("La duración para reservar sala debe ser positiva.")
+modelos.excepciones.ReservaInvalidaError: La duración para reservar sala debe ser positiva.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 40, in _confirmar_reserva_interna
+    self.servicio.validar_parametros(duracion=self.duracion)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\servicios.py", line 44, in validar_parametros
+    raise ReservaInvalidaError("Parámetros inválidos para ServicioReservaSala.") from e
+modelos.excepciones.ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [ERROR]: Error al crear la reserva para cliente 1 y servicio 1
+    Detalles de la excepción: ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\servicios.py", line 41, in validar_parametros
+    raise ReservaInvalidaError("La duración para reservar sala debe ser positiva.")
+modelos.excepciones.ReservaInvalidaError: La duración para reservar sala debe ser positiva.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\sistema\gestor.py", line 128, in crear_reserva
+    reserva = Reserva(nuevo_id, cliente, servicio, duracion)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 40, in _confirmar_reserva_interna
+    self.servicio.validar_parametros(duracion=self.duracion)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\servicios.py", line 44, in validar_parametros
+    raise ReservaInvalidaError("Parámetros inválidos para ServicioReservaSala.") from e
+modelos.excepciones.ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [INFO]: Reserva 1 cancelada exitosamente.
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [ERROR]: Error al cancelar la reserva 999
+    Detalles de la excepción: ReservaInvalidaError: Reserva con ID 999 no encontrada.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\sistema\gestor.py", line 146, in cancelar_reserva
+    raise ReservaInvalidaError(f"Reserva con ID {id_reserva} no encontrada.")
+modelos.excepciones.ReservaInvalidaError: Reserva con ID 999 no encontrada.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [INFO]: Reserva 2 procesada/completada exitosamente.
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [ERROR]: Error al procesar la reserva 1
+    Detalles de la excepción: ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 82, in procesar
+    raise ReservaInvalidaError(f"No se puede procesar una reserva en estado '{self.estado}'.")
+modelos.excepciones.ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [ERROR]: Error al procesar la reserva 1
+    Detalles de la excepción: ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\sistema\gestor.py", line 164, in procesar_reserva
+    reserva.procesar()
+    ~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 82, in procesar
+    raise ReservaInvalidaError(f"No se puede procesar una reserva en estado '{self.estado}'.")
+modelos.excepciones.ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [INFO]: Reserva 1 confirmada. Cliente: Juan Pérez, Servicio: Reserva Sala VIP, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [INFO]: Reserva 2 confirmada. Cliente: María Gómez, Servicio: Alquiler Laptop Gamer, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [ERROR]: Error al confirmar la reserva 3
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:08:23] [ERROR]: Error al cargar una reserva de ejemplo
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\sistema\gestor.py", line 82, in _cargar_datos_iniciales
+    reserva3 = Reserva(3, self.clientes[2], self.servicios[3], 2)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [INFO]: Reserva 1 confirmada. Cliente: Juan Pérez, Servicio: Reserva Sala VIP, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [INFO]: Reserva 2 confirmada. Cliente: María Gómez, Servicio: Alquiler Laptop Gamer, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [ERROR]: Error al confirmar la reserva 3
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [ERROR]: Error al cargar una reserva de ejemplo
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\sistema\gestor.py", line 82, in _cargar_datos_iniciales
+    reserva3 = Reserva(3, self.clientes[2], self.servicios[3], 2)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [INFO]: Cliente registrado: Ana Martínez (ID: 4)
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [ERROR]: Intento de registro de cliente inválido
+    Detalles de la excepción: ClienteInvalidoError: Email inválido: 'pedrocorreo'. Debe contener '@'.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\sistema\gestor.py", line 105, in registrar_cliente
+    cliente = Cliente(nuevo_id, nombre, email, telefono)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\cliente.py", line 17, in __init__
+    self.email = email
+    ^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\cliente.py", line 28, in email
+    raise ClienteInvalidoError(f"Email inválido: '{valor}'. Debe contener '@'.")
+modelos.excepciones.ClienteInvalidoError: Email inválido: 'pedrocorreo'. Debe contener '@'.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [ERROR]: Intento de registro de cliente inválido
+    Detalles de la excepción: ClienteInvalidoError: Teléfono inválido: '123'. Debe tener al menos 7 dígitos.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\sistema\gestor.py", line 105, in registrar_cliente
+    cliente = Cliente(nuevo_id, nombre, email, telefono)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\cliente.py", line 18, in __init__
+    self.telefono = telefono
+    ^^^^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\cliente.py", line 41, in telefono
+    raise ClienteInvalidoError(f"Teléfono inválido: '{valor}'. Debe tener al menos 7 dígitos.")
+modelos.excepciones.ClienteInvalidoError: Teléfono inválido: '123'. Debe tener al menos 7 dígitos.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [INFO]: Reserva 3 confirmada. Cliente: Juan Pérez, Servicio: Reserva Sala VIP, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [INFO]: Reserva creada exitosamente: Reserva #3 - Cliente: Juan Pérez - Servicio: Reserva Sala VIP - Estado: CONFIRMADA - Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [ERROR]: Error al confirmar la reserva 4
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [ERROR]: Error al crear la reserva para cliente 2 y servicio 4
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\sistema\gestor.py", line 128, in crear_reserva
+    reserva = Reserva(nuevo_id, cliente, servicio, duracion)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [ERROR]: Error al crear la reserva para cliente 99 y servicio 1
+    Detalles de la excepción: ReservaInvalidaError: Cliente con ID 99 no encontrado.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\sistema\gestor.py", line 121, in crear_reserva
+    raise ReservaInvalidaError(f"Cliente con ID {id_cliente} no encontrado.")
+modelos.excepciones.ReservaInvalidaError: Cliente con ID 99 no encontrado.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [ERROR]: Error al confirmar la reserva 4
+    Detalles de la excepción: ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\servicios.py", line 41, in validar_parametros
+    raise ReservaInvalidaError("La duración para reservar sala debe ser positiva.")
+modelos.excepciones.ReservaInvalidaError: La duración para reservar sala debe ser positiva.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 40, in _confirmar_reserva_interna
+    self.servicio.validar_parametros(duracion=self.duracion)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\servicios.py", line 44, in validar_parametros
+    raise ReservaInvalidaError("Parámetros inválidos para ServicioReservaSala.") from e
+modelos.excepciones.ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [ERROR]: Error al crear la reserva para cliente 1 y servicio 1
+    Detalles de la excepción: ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\servicios.py", line 41, in validar_parametros
+    raise ReservaInvalidaError("La duración para reservar sala debe ser positiva.")
+modelos.excepciones.ReservaInvalidaError: La duración para reservar sala debe ser positiva.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\sistema\gestor.py", line 128, in crear_reserva
+    reserva = Reserva(nuevo_id, cliente, servicio, duracion)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 40, in _confirmar_reserva_interna
+    self.servicio.validar_parametros(duracion=self.duracion)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\servicios.py", line 44, in validar_parametros
+    raise ReservaInvalidaError("Parámetros inválidos para ServicioReservaSala.") from e
+modelos.excepciones.ReservaInvalidaError: Parámetros inválidos para ServicioReservaSala.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [INFO]: Reserva 1 cancelada exitosamente.
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [ERROR]: Error al cancelar la reserva 999
+    Detalles de la excepción: ReservaInvalidaError: Reserva con ID 999 no encontrada.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\sistema\gestor.py", line 146, in cancelar_reserva
+    raise ReservaInvalidaError(f"Reserva con ID {id_reserva} no encontrada.")
+modelos.excepciones.ReservaInvalidaError: Reserva con ID 999 no encontrada.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [INFO]: Reserva 2 procesada/completada exitosamente.
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [ERROR]: Error al procesar la reserva 1
+    Detalles de la excepción: ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 82, in procesar
+    raise ReservaInvalidaError(f"No se puede procesar una reserva en estado '{self.estado}'.")
+modelos.excepciones.ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [ERROR]: Error al procesar la reserva 1
+    Detalles de la excepción: ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\sistema\gestor.py", line 164, in procesar_reserva
+    reserva.procesar()
+    ~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 82, in procesar
+    raise ReservaInvalidaError(f"No se puede procesar una reserva en estado '{self.estado}'.")
+modelos.excepciones.ReservaInvalidaError: No se puede procesar una reserva en estado 'CANCELADA'.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [INFO]: Reserva 1 confirmada. Cliente: Juan Pérez, Servicio: Reserva Sala VIP, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [INFO]: Reserva 2 confirmada. Cliente: María Gómez, Servicio: Alquiler Laptop Gamer, Costo: $600000.00
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [ERROR]: Error al confirmar la reserva 3
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
+[2026-06-27 17:09:21] [ERROR]: Error al cargar una reserva de ejemplo
+    Detalles de la excepción: ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+    Traceback:
+Traceback (most recent call last):
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\sistema\gestor.py", line 82, in _cargar_datos_iniciales
+    reserva3 = Reserva(3, self.clientes[2], self.servicios[3], 2)
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 30, in __init__
+    self._confirmar_reserva_interna()  # Se confirma automáticamente al crear
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "d:\TODO 2026\SEMESTRE 4\PROGRAMACION\Fase 4\sistema-software-fj\modelos\reserva.py", line 37, in _confirmar_reserva_interna
+    raise ServicioNoDisponibleError(f"El servicio '{self.servicio.nombre}' no está disponible.")
+modelos.excepciones.ServicioNoDisponibleError: El servicio 'Sala No Disponible' no está disponible.
+
+--------------------------------------------------------------------------------
